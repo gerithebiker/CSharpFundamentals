@@ -152,6 +152,25 @@ namespace CSharpFundamentals
             }
             Console.WriteLine("The maximum input was: " + max);
         }
+        public void FourChance()
+        {
+            var random = new Random();
+            var mySecrNum = random.Next(1, 10);
+            var counter = 1;
+            var found = false;
+            do
+            {
+                Console.Write("Guess a number between between 1 and 10. U have 4 chances. Number " + counter  + ": ");
+                var myInput = Convert.ToInt32(Console.ReadLine());
+                if(myInput == mySecrNum)
+                {
+                    Console.WriteLine("You won, it was " + mySecrNum);
+                    found = true;
+                }
+                counter++;     
+            } while (counter < 5 && !found);
+            if (!found) { Console.WriteLine("I won!"); }
+        }
         public int ByThree(int maxNumber)
         {
             var myCounter = 0;
