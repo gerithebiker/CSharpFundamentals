@@ -78,7 +78,7 @@ namespace CSharpFundamentals
             Calculator calculator = new Calculator();
             calculator.ByThree(300);
             calculator.OtherMax();
-            calculator.FourChance;
+            calculator.FourChance();
             var result = calculator.Add(1, 4);
             Console.WriteLine(result);
             result = calculator.Taw(6, 2);
