@@ -69,7 +69,7 @@ namespace CSharpFundamentals
         }
         static void Main(string[] args)
         {
-
+            calculator.ByThree(3);
             var john = new Person();
             john.FirstName = "John";
             john.LastName = "Smith";

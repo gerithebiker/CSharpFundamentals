@@ -134,6 +134,19 @@ namespace CSharpFundamentals
                 }
             }
         }
+        public int ByThree(int maxNumber)
+        {
+            var myCounter = 0;
+            for(var i=1; i<=maxNumber; i++)
+            {
+                if(i % 3 == 0)
+                {
+                    myCounter++;
+                }
+            }
+            Console.WriteLine("There are " + myCounter + " number between 1 and " + maxNumber + " that is divisible by 3.");
+            return myCounter;
+        }
     }
 }
 
