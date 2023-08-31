@@ -69,13 +69,14 @@ namespace CSharpFundamentals
         }
         static void Main(string[] args)
         {
-            calculator.ByThree(3);
+
             var john = new Person();
             john.FirstName = "John";
             john.LastName = "Smith";
             john.Introduce();
 
             Calculator calculator = new Calculator();
+            calculator.ByThree(300);
             var result = calculator.Add(1, 4);
             Console.WriteLine(result);
             result = calculator.Taw(6, 2);
