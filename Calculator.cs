@@ -134,6 +134,21 @@ namespace CSharpFundamentals
                 }
             }
         }
+        public void OtherMax()
+        {
+            Console.Write("Gimme the first number: ");
+            var max = 0;
+            var myInput = Console.ReadLine();
+            
+            while (myInput != "ok")
+            {
+                var myNumber =  Convert.ToInt32(myInput);
+                myNumber > max ? max = myNumber;
+                Console.Write("What's the next number: ");
+                myInput = Console.ReadLine();
+            }
+            Console.WriteLine("The maximum input was: " + max);
+        }
         public int ByThree(int maxNumber)
         {
             var myCounter = 0;
@@ -145,6 +160,7 @@ namespace CSharpFundamentals
                 }
             }
             Console.WriteLine("There are " + myCounter + " number between 1 and " + maxNumber + " that is divisible by 3.");
+            return myCounter;
             return myCounter;
         }
     }
