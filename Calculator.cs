@@ -143,7 +143,10 @@ namespace CSharpFundamentals
             while (myInput != "ok")
             {
                 var myNumber =  Convert.ToInt32(myInput);
-                myNumber > max ? max = myNumber;
+                if (myNumber > max)
+                {
+                    max = myNumber;
+                }
                 Console.Write("What's the next number: ");
                 myInput = Console.ReadLine();
             }
