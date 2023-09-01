@@ -72,7 +72,8 @@ namespace CSharpFundamentals
         {
             Exercises exercise = new Exercises();
             exercise.Facebook();
-            
+            exercise.ReverseName();
+
             var numbersList = new List<int>() { 1, 2, 3, 2, 5, 2, 6 };
             numbersList.Add(13);
             numbersList.Sort();
