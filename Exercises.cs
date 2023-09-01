@@ -47,11 +47,12 @@ namespace CSharpFundamentals
             Console.Write("Please give me your name, I will reverse it: ");
             var myInput = Console.ReadLine();
             var reverseArray = new char[myInput.Length];
-            for(var i = reverseArray.Length; i = 0; i--)
+            for(var i = reverseArray.Length; i > 0; i--)
             {
-                reverseArray[reverseArray.Length - i] = myInput[i];
+                reverseArray[reverseArray.Length - i] = myInput[i-1];
             }
-            Console.WriteLine($"This is your name in reverse: {reverseArray}");
+            var reverseString = new string(reverseArray);
+            Console.WriteLine($"This is your name in reverse: {reverseString}");
         }
         public void FiveNumbers()
         {
