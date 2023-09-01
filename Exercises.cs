@@ -46,9 +46,11 @@ namespace CSharpFundamentals
         {
             Console.Write("Please give me your name, I will reverse it: ");
             var myInput = Console.ReadLine();
-            var reverseArray = new Array(char[myInput.Length]);
-            Array.Copy(myInput, reverseArray, myInput.Length);
-            Array.Reverse(reverseArray);
+            var reverseArray = new char[myInput.Length];
+            for(var i = reverseArray.Length; i = 0; i--)
+            {
+                reverseArray[reverseArray.Length - i] = myInput[i];
+            }
             Console.WriteLine($"This is your name in reverse: {reverseArray}");
         }
     }
