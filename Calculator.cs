@@ -6,6 +6,7 @@ using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
+using Microsoft.VisualBasic;
 
 namespace CSharpFundamentals
 {
@@ -181,9 +182,21 @@ namespace CSharpFundamentals
                     myCounter++;
                 }
             }
-            Console.WriteLine("There are " + myCounter + " number between 1 and " + maxNumber + " that is divisible by 3.");
+            //Console.WriteLine("There are " + myCounter + " number between 1 and " + maxNumber + " that is divisible by 3.");
+            Console.WriteLine($"There are {myCounter} number between 1 and {maxNumber} that is divisible by 3.");
             return myCounter;
-            return myCounter;
+        }
+        public void MaxOfList(string inputString)
+        {
+            string[] myArray = inputString.Split(',');
+            var max = 0;
+            foreach(var item in myArray)
+            {
+                var myNumber = Convert.ToInt32(item);
+                max = myNumber > max ? myNumber : max;
+            }
+            Console.WriteLine("The max was " + max);
+            // return "All Good";
         }
     }
 }

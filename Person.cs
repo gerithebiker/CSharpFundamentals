@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharpFundamentals
 {
-    public class Person
+    public class NewPerson
     {
         public string FirstName;
         public string LastName;
@@ -16,5 +16,7 @@ namespace CSharpFundamentals
         {
             Console.WriteLine("My name is " + FirstName + " " + LastName);
         }
-    }
+	}
+
 }
+

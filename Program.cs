@@ -1,6 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System;
 using Conditionals;
+using System.Collections.Generic;
 
 namespace CSharpFundamentals
 {
@@ -69,13 +70,34 @@ namespace CSharpFundamentals
         }
         static void Main(string[] args)
         {
+            Exercises exercise = new Exercises();
+            exercise.Facebook();
+            
+            var numbersList = new List<int>() { 1, 2, 3, 2, 5, 2, 6 };
+            numbersList.Add(13);
+            numbersList.Sort();
+            foreach (int number in numbersList)
+            {
+                Console.WriteLine(number);
+            }
+            Console.WriteLine(numbersList.IndexOf(2));
+
+            int[] numbers3 = new int[4] { 1, 2, 3, 4 };
+            Array.Sort(numbers3);
 
             var john = new Person();
             john.FirstName = "John";
             john.LastName = "Smith";
             john.Introduce();
+            Console.Write("Gimme a list of numbers divided by comma: ");
+            var inputString = Console.ReadLine();
 
             Calculator calculator = new Calculator();
+            // as inputString "could be" a null value, we have to verify and then call the function
+            if (inputString != null)
+            {
+                calculator.MaxOfList(inputString);
+            }
             calculator.ByThree(300);
             calculator.OtherMax();
             calculator.FourChance();
