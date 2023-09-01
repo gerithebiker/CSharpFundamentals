@@ -53,5 +53,9 @@ namespace CSharpFundamentals
             }
             Console.WriteLine($"This is your name in reverse: {reverseArray}");
         }
+        public void FiveNumbers()
+        {
+            Console.WriteLine("I am expecting 5 separated numbers, but none of them should be the same!");
+        }
     }
 }
