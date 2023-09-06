@@ -71,8 +71,14 @@ namespace CSharpFundamentals
         static void Main(string[] args)
         {
             Exercises exercise = new Exercises();
+            TextEx textEx = new TextEx();
+            textEx.TrimDemo();
+            textEx.PascalCase();
+            textEx.Consecutive();
+            textEx.TwentyFour();
             exercise.Facebook();
             exercise.ReverseName();
+            exercise.FiveNumbers();
 
             var numbersList = new List<int>() { 1, 2, 3, 2, 5, 2, 6 };
             numbersList.Add(13);

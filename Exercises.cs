@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -56,7 +57,32 @@ namespace CSharpFundamentals
         }
         public void FiveNumbers()
         {
+            var myArray = new int[5];
             Console.WriteLine("I am expecting 5 separated numbers, but none of them should be the same!");
+            Console.Write("Give me the first number: ");
+            myArray[0] = Convert.ToInt32(Console.ReadLine());
+            var i = 1;
+            while(i<5)
+            {
+                Console.Write("Give me the next: ");
+                var myInput = Convert.ToInt32(Console.ReadLine());
+                if(Array.IndexOf(myArray, myInput) == -1)
+                {
+                    myArray[i] = myInput;
+                    i++;
+                }
+                else
+                {
+                    Console.WriteLine("You gave me this number already!");
+                }
+            }
+            Array.Sort(myArray);
+            Console.WriteLine("Here are all the numbers you gave:");
+            foreach(var number  in myArray)
+            {
+                Console.Write($"{number} ");
+            }
+            Console.WriteLine();
         }
     }
 }
